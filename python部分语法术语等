@@ -1,3 +1,4 @@
 BIF：Built-in functions 内置函数
 原始字符串‘r’ 例如 str = r"c:\now" 此时\n 不会被转换为回车键而是单纯的作为\n使用 print(str); 会打印出 c:\now
 python中 else if 写为elif
+python中 三元运算符 test = x if x<y else y
