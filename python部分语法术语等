@@ -1,4 +1,49 @@
 BIF：Built-in functions 内置函数
 原始字符串‘r’ 例如 str = r"c:\now" 此时\n 不会被转换为回车键而是单纯的作为\n使用 print(str); 会打印出 c:\now
 python中 else if 写为elif
-python中 三元运算符 test = x if x<y else y
+python中的三元运算符 test = x if x < y else y
+assert 断言 只有当为真是程序继续进行 为假抛出异常
+python中的for循环用法： for 目标 in 表达式：
+                            循环体
+python中列表（数组）的分片silence 数组[开始位置（0开始）：结束位置第几个数] member = [1,2,3,4] member[1:3]>> [2,3]
+python中的列表删除方法：remove（），del（），pop（） 其中pop方法会返回删除元素
+在python中定义函数用def方法 例如： def MyFunction(参数):
+                                    ...
+                                    ...
+                                    ...
+python支持函数嵌套： def fun1():
+                        print(‘fun1被调用’)
+                        def fun2():
+                            print('fun2被调用')
+                        fun2（）
+                输出： fun1（）正在被调用
+                       fun2（）正在被调用
+python中想要修改全局变量必须使用关键字global 因为为了安全性 同名变量直接修改 python会复制出一个同名函数修改。
+
+python中的闭包及调用
+    def funX(x):
+        def funY(y):
+            return X*y 
+        return funY
+>> funX(8)(5)
+40
+
+python中对于内部方法中需要修改外部方法变量
+    def funX():
+        x = 10;
+        def funY():
+            nonlocal x   #如果不声明为nonlocal 对于内部x会被外部x屏蔽从而修改失效
+            x *= x
+            return X
+        return funY()
+>>funX()
+100         #不加nonlocal仍会返回10
+
+python中的匿名函数的使用
+        def test(x):
+            return 2*x+1
+>>test(5)
+11
+>> g = lambda x : 2*x+1  # ":" 前面是函数的参数 后面是返回的函数
+>> g(5)
+11
