@@ -47,3 +47,7 @@ python中的匿名函数的使用
 >> g = lambda x : 2*x+1  # ":" 前面是函数的参数 后面是返回的函数
 >> g(5)
 11
+
+python中过滤器filter（）的使用
+>>list(filter(None,[1,0,True,False]))
+[1,true]
