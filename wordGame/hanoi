@@ -1,0 +1,10 @@
+def hanio(n,x,y,z):
+	if(n == 1):
+		print(x,' --> ',z)
+	else:
+		hanio(n-1,x,z,y)#把n-1个盘子移到中间柱子
+		print(x,' --> ',z)#把最底下的盘子移到最后的柱子
+		hanio(n-1,y,x,z)#把中间柱子上的盘子移到最后的柱子
+
+n = int(input('请输入盘子数量： '));
+hanio(n,'X','Y','Z')
