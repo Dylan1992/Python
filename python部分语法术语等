@@ -63,3 +63,5 @@ filter()的实际使用
 lambda和filter的结合使用
 >>list(filter(lambda x : x%2,range(10)))
 [1,3,5,7,9] 
+
+python中集合具有不重复属性
