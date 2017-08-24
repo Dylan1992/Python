@@ -68,3 +68,11 @@ python中集合具有不重复属性
 所以当需要去重时可以：
 num = [1,2,3,3,4,5]
 a = list(set(num))
+
+python中的长期存贮数据利用pickle
+举例：
+import pickle 
+my_list[1,2,'123',['1',[2]]]
+pickle_file = open('my_list.pkl','wb') 后缀起标识的作用 可以自己确定
+pickle.dump(my_list，pickle_file)
+pickle_file.close()
