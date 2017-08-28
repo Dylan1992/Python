@@ -85,3 +85,15 @@ print(my_list2)
 在python中将所有引入包内容导入: from 包 import *
 或者使用 import 包 as g  g为别名 例如 import easygui as g
                                     g.msgbox('练习')
+
+
+python中的构造函数：
+>>>class Ball:
+    def _init_(self,name):  #self 在python中相当于this指针 
+        self.name = name
+    def kick(self):
+        print('who's kick %s? % self.name');
+
+>>> b = Ball('足球')
+>>> b.kick()
+who's kick 足球？
