@@ -89,7 +89,7 @@ print(my_list2)
 
 python中的构造函数：
 >>>class Ball:
-    def _init_(self,name):  #self 在python中相当于this指针 
+    def _init_(self,name):     #self 在python中相当于this指针 
         self.name = name
     def kick(self):
         print('who's kick %s? % self.name');
@@ -97,3 +97,13 @@ python中的构造函数：
 >>> b = Ball('足球')
 >>> b.kick()
 who's kick 足球？
+
+python中定义私有变量加两个下划线'__'
+>>>class Test:
+  __name = 'AA'
+  def getName(self):
+    print(self.__name)
+    
+>>>T = Test()
+>>>T.getName()
+AA
