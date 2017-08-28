@@ -81,3 +81,5 @@ pickle的读取：
 pickle_file = open('my_list.pickle','rb')
 my_list2 = pickle.load(pickle_file)
 print(my_list2)
+
+在python中将所有引入包内容导入: from 包 import *
