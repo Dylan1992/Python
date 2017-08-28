@@ -83,3 +83,5 @@ my_list2 = pickle.load(pickle_file)
 print(my_list2)
 
 在python中将所有引入包内容导入: from 包 import *
+或者使用 import 包 as g  g为别名 例如 import easygui as g
+                                    g.msgbox('练习')
