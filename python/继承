@@ -20,7 +20,7 @@ class Salmon(Fish):
 
 class Shark(Fish):
     def _init_(self):
-        Fish._init_(self)   #调用未绑定的父类方法
+        Fish._init_(self)   #调用未绑定的父类方法 或写成 super()._init_() 调用super方法 可以不传self参数
         self.hungry = True
 
     def eat(self):
