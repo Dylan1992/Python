@@ -1,0 +1,32 @@
+#python的一个计时器
+import time as t
+
+class MyTimer():
+    #开始计时
+    def start(self):
+        self.start = t.localtime()   #gmtime(),localtime()和strptime()以时间元祖(struct_time)的形式返回
+        print('开始计时！')
+
+    #结束计时
+    def stop(self):
+        self.stop = t.localtime()
+        self._calc()
+        print('结束计时！')
+
+    #内部方法，计算运行时间
+    def _calc(self):
+        self.lasted = []
+        self.prompt = '运行了： '
+
+        for index in range(6):
+            self.lasted.append(self.stop[index] - self.start[index])
+            self.prompt += str(self.lasted[index])
+
+        print(self.prompt)
+#   索引值 index    属性 Attribute
+#   0               tm_year
+#   1               tm_month
+#   2               tm_day
+#   3               tm_hour
+#   4               tm_min
+#   5               tm_sec
